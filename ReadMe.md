@@ -5,6 +5,10 @@
 ## Quick Start
 
 ```bash
+
+# Install Type Script globally
+sudo npm install -g typescript ts-node
+
 # Run Mongo DB server 
  .\mongod.exe --dbpath d:\mongodb
 
@@ -16,6 +20,9 @@ npm run dev
 
 # Run the Express server only
 npm run server
+
+# Run Type Script code 
+npm run dev
 
 # Server runs on http://localhost:5000
 ```

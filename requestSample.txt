@@ -1,0 +1,10 @@
+Request: http://localhost:5000/contact
+Method: Post
+Json: 
+{
+"firstName": "John",
+"lastName": "Doe"
+}
+
+Request: http://localhost:5000/contact/5bac2da93534e7007addc531
+Method: GET
