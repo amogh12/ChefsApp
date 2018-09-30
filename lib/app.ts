@@ -8,6 +8,8 @@ class App {
     public app: express.Application;
     public routePrv: BasicRoutes = new BasicRoutes();
     public mongoUrl: string = 'mongodb://localhost:27017/chefsdb';
+    // use following when working with docker
+    // public mongoUrl: string = 'mongodb://mongo:27017/chefsdb';
 
     constructor() {
         this.app = express();
