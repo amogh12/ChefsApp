@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ChefsAppMain": {
+    "ChefsAppFrontEnd": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ChefsAppMain",
+            "outputPath": "dist/ChefsAppFrontEnd",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ChefsAppMain:build"
+            "browserTarget": "ChefsAppFrontEnd:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ChefsAppMain:build:production"
+              "browserTarget": "ChefsAppFrontEnd:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ChefsAppMain:build"
+            "browserTarget": "ChefsAppFrontEnd:build"
           }
         },
         "test": {
@@ -95,7 +96,7 @@
         }
       }
     },
-    "ChefsAppMain-e2e": {
+    "ChefsAppFrontEnd-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "targets": {
@@ -103,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ChefsAppMain:serve"
+            "devServerTarget": "ChefsAppFrontEnd:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ChefsAppMain:serve:production"
+              "devServerTarget": "ChefsAppFrontEnd:serve:production"
             }
           }
         },
@@ -123,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "ChefsAppMain"
+  "defaultProject": "ChefsAppFrontEnd"
 }
