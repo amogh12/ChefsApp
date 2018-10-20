@@ -14,4 +14,7 @@ export class LoginFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  get diagnostics() {
+    return JSON.stringify(this.testUser)
+  }
 }
