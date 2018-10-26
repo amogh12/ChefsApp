@@ -3,9 +3,14 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const users = require('./routes/api/users');
 const app = express();
+const chaosMonkey = require('chaos-monkey');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+//instantiating pranks (chaos monkey)
+new chaosMonkey(app, require('./chaos.config')).start();
 
 const db = require('./config/keys').mongoURI;
 const items = require('./routes/api/items');
