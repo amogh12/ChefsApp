@@ -18,5 +18,6 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit() { 
     console.log(this.submitted)
-    this.submitted = true; }
+    this.submitted = true; 
+  }
 }
