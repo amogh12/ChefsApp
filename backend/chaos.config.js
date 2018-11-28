@@ -11,7 +11,7 @@ module.exports = {
       },
       schedule: {
         type: "immediate-schedule",
-        fadeOutInMS: 3000,
+        fadeOutInMS: 3000
       }
     },
     {
